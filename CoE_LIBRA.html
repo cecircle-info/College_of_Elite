@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College_of_Elite_FLAVE</title>
+    <link rel="icon" href="image/CoE_logo_favicon.webp" type="image/webp" sizes="32x32">
+
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'kzh4vdh',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    img{
+        vertical-align: bottom;
+        width: 100%;
+        height: auto;
+    }
+    li{
+        list-style: none;
+    }
+
+    p{
+        font-family: "hina-mincho", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+
+    }
+
+        main{
+            width: 100vw;
+            background-color: #EAEAEA;
+
+            background-image:url(image/killting_minisize.webp);
+            background-size: 100%;
+            background-repeat: repeat-y;
+            
+            
+        }
+        p{
+            color: white;
+        }
+
+        h2{
+        font-family: "hina-mincho", sans-serif;
+font-weight: 400;
+font-style: normal;
+    }
+
+
+.side {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 50;
+}
+
+.side img {
+    position: absolute;
+    width: 3%;
+}
+
+.side img:first-child {
+    left: 2%;
+}
+
+.side img:last-child {
+    right: 2%;
+}
+
+
+
+.ryo_choice_top{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    padding-top: 25%;
+    
+}
+
+.ryo_one{
+    width: 30%;
+}
+
+.ryo_one h2{
+    font-size: 3.4vw;
+    letter-spacing:-3%;
+}
+
+.ryo_one a img{
+    width: 85%;
+    margin-top: 5%;
+}
+
+.ryo_top{
+    margin: 15% 0 10%;
+    position: relative;
+}
+
+.ryo_top_logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ryo_top_logo img:first-child{
+    width: 10%;
+}
+
+.ryo_top_logo img:last-child{
+    width: 26%;
+    height: 15%;
+    margin-bottom: -5%;
+}
+
+.ryo_top p{
+    margin-top: 10%;
+    color: black;
+    text-align: center;
+    font-size: 3.75vw;
+    line-height:1.7;
+
+  text-shadow: 0px 2px 4px  rgb(0 0 0 / 25%);
+}
+
+.ryo_top_logo_line{
+    width: 20%;
+    position: absolute;
+    bottom: -15%;
+    right: 10%;
+}
+
+
+.student_list{
+    background-image: url(image/background_blue.webp);
+    background-size: 100%;
+}
+
+.king {
+    width: 100%;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+}
+
+
+.king_chara {
+    position: relative;
+    text-align: center;
+}
+
+.king_chara img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+}
+
+.king_chara img:not(.ura) {
+    transition: opacity .5s;
+    transition-delay: 0s;
+}
+
+.king_chara .ura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.king_chara:hover img:not(.ura) {
+    opacity: 0;
+    transition-delay: .15s;
+}
+
+.king_chara:hover .ura {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.king p{
+    background-color: #006CE2;
+    font-size: 3vw;
+    padding: 0.2vw 0;
+}
+.king img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+}
+
+
+.chara_list{
+    display: grid;
+  grid-template-columns: repeat(3, 30%);
+
+    justify-content: center;
+}
+
+.chara:nth-child(3n + 2) {
+  transform: translateY(25%);
+}
+
+.chara{
+    text-align: center;
+    position: relative;
+    margin-top: 8%;
+}
+
+.chara p{
+    background-color: #006CE2;
+    font-size: 3.125vw;
+    padding: 0.2vw 0;
+
+    letter-spacing: -1px;
+}
+
+.en {
+    letter-spacing: 0;
+}
+
+
+
+.chara:hover img:not(.ura) {
+    opacity: 0;
+}
+
+.chara img:not(.ura) {
+    transition: opacity .5s;
+    transition-delay: 0s;
+}
+
+.chara .ura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.chara:hover img:not(.ura) {
+    opacity: 0;
+    transition-delay: .15s;
+}
+
+.chara:hover .ura {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.student_list{
+    background-repeat: no-repeat;
+    padding-bottom: 60%;
+}
+
+
+.choise_under {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ryo_choice_under {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%; 
+    width:85%;
+    margin: 0 5%;
+}
+
+.top_button {
+    display: block;
+    width: 20vw;
+    margin: 5% auto 0;
+}
+
+
+.copy_light {
+    width: 30%;
+    display: block;
+    margin: 8% auto 2%;
+}
+
+footer{
+    background-image: url(image/footer_background.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    height: 62.5%;
+
+}
+
+footer{
+   
+    display: flex;
+    justify-content: center;
+
+     gap: 2%;
+
+     padding: 45% 10% 8%;
+
+}
+
+
+
+
+/*----------------------------- メディアクエリ---------------------------------- */
+/*----------------------------- メディアクエリ---------------------------------- */
+/*----------------------------- メディアクエリ---------------------------------- */
+/*----------------------------- メディアクエリ---------------------------------- */
+/*----------------------------- メディアクエリ---------------------------------- */
+
+        @media screen and (min-width:769px) {
+
+    main{
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .side img:first-child {
+        left: calc((100vw - 500px) / 2 + 2px);
+    }
+
+
+    .side img:last-child {
+        right: calc((100vw - 500px) / 2 + 2px);
+    }
+
+    .side img{
+        width: 20px;
+    }
+
+
+    .king p{
+        font-size: 15px;
+        padding: 1px 0;
+    }
+
+    .chara p{
+        font-size: 15px;
+    }
+
+
+.ryo_one h2{
+    font-size: 17px;
+}
+
+.ryo_top p{
+    font-size: 17.2px;
+}
+
+.king p{
+    font-size: 14px;
+    padding: 0.28px 0;
+}
+
+.chara p{
+    font-size: 14px;
+    padding:  0.28px 0;
+}
+
+.top_button {
+    width: 100px;
+}
+
+}
+
+/*----------------------------- メディアクエリおわり---------------------------------- */
+/*----------------------------- メディアクエリおわり---------------------------------- */
+/*----------------------------- メディアクエリおわり---------------------------------- */
+/*----------------------------- メディアクエリおわり---------------------------------- */
+/*----------------------------- メディアクエリおわり---------------------------------- */
+
+
+#modal {
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(82, 108, 148, 0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+#modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+#modal-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 80vh;
+    margin-top: -5%;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+#modal-close {
+    position: relative;
+
+    width: clamp(50px, 5vw, 100px);
+    height: clamp(50px, 5vw, 100px);
+
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#modal-close img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.chara img,
+.king_chara img {
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+
+<div class="side">
+    <img src="image/yoko_blue.webp" width="63" height="198" alt="side_blue"> 
+    <img src="image/yoko_blue.webp" width="63" height="198" alt="side_blue"> 
+</div>
+
+
+<div class="ryo_choice_top">
+    <div class="ryo_one">
+            <img src="image/FRAVE_top_icon.webp" width="34" height="95" alt="frave_icon">
+        <h2>〜フレイヴ寮〜</h2>
+        <a href="CoE_FRAVE.html"><img src="image/FRAVE_student_icon.webp" width="732" height="192" alt="FRAVE_student_icon"></a>
+    </div>
+    <div class="ryo_one">
+        <img src="image/LIBRA_top_icon.webp" width="34" height="95" alt="LIBRA_icon">
+        <h2>〜リブラ寮〜</h2>
+        <a href="CoE_LIBRA.html"><img src="image/libra_student_icon.webp" width="732" height="192" alt="libra_student_icon"></a>
+    </div>
+    <div class="ryo_one">
+        <img src="image/NIKAMEKA_top_icon.webp" width="34" height="95" alt="nikameka_icon">
+        <h2>〜二カメカ寮〜</h2>
+        <a href="CoE_NIKAMEKA.html"><img src="image/nikameka_student_icon.webp" width="732" height="192" alt="nikameka_student_icon"></a>
+    </div>
+</div>
+
+<div class="ryo_top">
+    <div class="ryo_top_logo">
+        <img src="image/LIBRA_blue_logo_shadow.webp" width="312" height="312" alt="ryo_logo">
+        <img src="image/LIBRA_logo_shadow.webp" width="582" height="231" alt="ryo_name">
+    </div>
+    <p>知識と探究心を何よりも尊ぶ、学術の寮。<br>
+            寮生たちが探求する分野はそれぞれだが、<br>
+            共通しているのは<br>
+            「知らないものを、そのままにしない」<br>
+            という強い好奇心である。
+            </p>
+
+    <img class="ryo_top_logo_line" src="image/LIBRA_icon_line.webp" width="474" height="630" alt="LIBRA_icon_line">
+</div>
+
+
+
+
+<div class="student_list">
+
+<div class="king">
+
+    <div class="king_chara">
+        <img src="image/card/F18_3x.webp" alt="F18">
+        <img class="ura" src="image/card/F18-ura_3x.webp" alt="F18-ura">
+        <p>ソドリョン</p>
+    </div>
+
+    <div class="king_chara">
+        <img src="image/card/F19_3x.webp" alt="F19">
+        <img class="ura" src="image/card/F19-ura_3x.webp" alt="F19-ura">
+        <p>ゼド・サルヴィライト</p>
+    </div>
+
+</div>
+
+<div class="chara_list">
+
+        <div class="chara">
+                <img src="image/card/F20_3x.webp" width="133" height="272" alt="F20">
+                <img class="ura" src="image/card/F20-ura_3x.webp" width="133" height="272" alt="F20-ura">
+                <p><span class="en">Sei</span></p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F21_3x.webp" width="133" height="272" alt="F21">
+                <img class="ura" src="image/card/F21-ura_3x.webp" width="133" height="272" alt="F21-ura">
+                <p>エレメ・エルベール</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F22_3x.webp" width="133" height="272" alt="F22">
+                <img class="ura" src="image/card/F22-ura_3x.webp" width="133" height="272" alt="F22-ura">
+                <p>カイビス</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F23_3x.webp" width="133" height="272" alt="F23">
+                <img class="ura" src="image/card/F23-ura_3x.webp" width="133" height="272" alt="F23-ura">
+                <p>アムリ・グリマルキン</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F24_3x.webp" width="133" height="272" alt="F24">
+                <img class="ura" src="image/card/F24-ura_3x.webp" width="133" height="272" alt="F24-ura">
+                <p>アイリーン</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F25_3x.webp" width="133" height="272" alt="F25">
+                <img class="ura" src="image/card/F25-ura_3x.webp" width="133" height="272" alt="F25-ura">
+                <p>ルシエル</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F26_3x.webp" width="133" height="272" alt="F26">
+                <img class="ura" src="image/card/F26-ura_3x.webp" width="133" height="272" alt="F26-ura">
+                <p>有合修鉾</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F27_3x.webp" width="133" height="272" alt="F27">
+                <img class="ura" src="image/card/F27-ura_3x.webp" width="133" height="272" alt="F27-ura">
+                <p><span class="en">Leo Mirage</span></p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F28_3x.webp" width="133" height="272" alt="F28">
+                <img class="ura" src="image/card/F28-ura_3x.webp" width="133" height="272" alt="F28-ura">
+                <p>たお</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F29_3x.webp" width="133" height="272" alt="F29">
+                <img class="ura" src="image/card/F29-ura_3x.webp" width="133" height="272" alt="F29-ura">
+                <p>ユナラロ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F30_3x.webp" width="133" height="272" alt="F30">
+                <img class="ura" src="image/card/F30-ura_3x.webp" width="133" height="272" alt="F30-ura">
+                <p>イリス</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F31_3x.webp" width="133" height="272" alt="F31">
+                <img class="ura" src="image/card/F31-ura_3x.webp" width="133" height="272" alt="F31-ura">
+                <p>ネフェル・ヘイゼル</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F32_3x.webp" width="133" height="272" alt="F32">
+                <img class="ura" src="image/card/F32-ura_3x.webp" width="133" height="272" alt="F32-ura">
+                <p>カスティ・タース</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F33_3x.webp" width="133" height="272" alt="F33">
+                <img class="ura" src="image/card/F33-ura_3x.webp" width="133" height="272" alt="F33-ura">
+                <p>綾茂草子</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F34_3x.webp" width="133" height="272" alt="F34">
+                <img class="ura" src="image/card/F34-ura_3x.webp" width="133" height="272" alt="F34-ura">
+                <p>ドルタ・ラーラ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F35_3x.webp" width="133" height="272" alt="F35">
+                <img class="ura" src="image/card/F35-ura_3x.webp" width="133" height="272" alt="F35-ura">
+                <p>魔魅夜ロナ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F36_3x.webp" width="133" height="272" alt="F36">
+                <img class="ura" src="image/card/F36-ura_3x.webp" width="133" height="272" alt="F36-ura">
+                <p>チバチハラ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F37_3x.webp" width="133" height="272" alt="F37">
+                <img class="ura" src="image/card/F37-ura_3x.webp" width="133" height="272" alt="F37-ura">
+                <p>カルマ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F38_3x.webp" width="133" height="272" alt="F38">
+                <img class="ura" src="image/card/F38-ura_3x.webp" width="133" height="272" alt="F38-ura">
+                <p>ローア</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F39_3x.webp" width="133" height="272" alt="F39">
+                <img class="ura" src="image/card/F39-ura_3x.webp" width="133" height="272" alt="F39-ura">
+                <p>無名</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F40_3x.webp" width="133" height="272" alt="F40">
+                <img class="ura" src="image/card/F40-ura_3x.webp" width="133" height="272" alt="F40-ura">
+                <p>リズミ・ヴァレン</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F41_3x.webp" width="133" height="272" alt="F41">
+                <img class="ura" src="image/card/F41-ura_3x.webp" width="133" height="272" alt="F41-ura">
+                <p>メイ・スケイプ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F42_3x.webp" width="133" height="272" alt="F42">
+                <img class="ura" src="image/card/F42-ura_3x.webp" width="133" height="272" alt="F42-ura">
+                <p>ラジット・ヘヴンツ</p>
+            </div>
+            <div class="chara">
+                <img src="image/card/F43_3x.webp" width="133" height="272" alt="F43">
+                <img class="ura" src="image/card/F43-ura_3x.webp" width="133" height="272" alt="F43-ura">
+                <p>トワレ</p>
+            </div>
+
+</div>
+
+</div>
+
+<div class="choise_under">
+
+    <div class="ryo_choice_under">
+     <a href="CoE_FRAVE.html"><img src="image/frave_student_icon.webp" width="732" height="192" alt="frave_student_icon"></a>
+    <a href="CoE_LIBRA.html"><img src="image/libra_student_icon.webp" width="732" height="192" alt="libra_student_icon"></a>
+    <a href="CoE_NIKAMEKA.html"><img src="image/nikameka_student_icon.webp" width="732" height="192" alt="nikameka_student_icon"></a>
+    </div>
+
+    <a class="top_button" href="index.html"><img src="image/TOP_button.webp" width="333" height="117" alt="top_icon"></a>
+
+</div>
+
+<img class="copy_light" src="image/copy_light.webp" width="648" height="98" alt="copy_light">
+
+<footer>
+    <a href="https://x.com/Zokei_CE"><img src="image/x_icon.webp" width="720" height="156" alt="x_logo"></a>
+    <a href="https://www.instagram.com/zokei_ce/"><img src="image/insta_icon.webp" width="720" height="156" alt="x_logo"></a>
+</footer>
+
+
+
+<div id="modal">
+        <div id="modal-content">
+            <img id="modal-image" src="" alt="キャラクターシート">
+    
+            <button id="modal-close">
+                <img src="image/close.webp" alt="閉じる">
+            </button>
+        </div>
+    </div>
+    
+    </main>
+</body>
+
+<script>
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const closeButton = document.getElementById("modal-close");
+        
+document.querySelectorAll(".chara img, .king_chara img").forEach(img => {
+    img.addEventListener("click", () => {
+
+        const match = img.src.match(/F(\d+)/);
+
+        if (!match) return;
+
+        const charaNumber = match[1];
+
+        modalImage.src = `image/chara_seet/S${charaNumber}_1x.webp`;
+        setTimeout(() => {
+            modal.classList.add("active");
+        }, 50);
+
+    });
+});
+        
+        function closeModal() {
+            modal.classList.remove("active");
+        }
+        
+
+        closeButton.addEventListener("click", closeModal);
+        
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeModal();
+            }
+        });
+        </script>
+</html>
