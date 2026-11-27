@@ -170,7 +170,7 @@ main{
     transform: translateX(-50%);
 }
 footer{
-    border-top: solid 3px #000000;
+    border-top: solid 10px #000000;
     color: #CBCBCB;
     background-color: #000000;
     text-align: center;
