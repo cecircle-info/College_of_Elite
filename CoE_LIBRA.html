@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College_of_Elite_FLAVE</title>
     <link rel="icon" href="image/CoE_logo_favicon.webp" type="image/webp" sizes="32x32">
+    <link rel="stylesheet" href="style_header.css">
 
     <script>
   (function(d) {
@@ -18,6 +19,13 @@
 </script>
 
     <style>
+
+        
+        body{
+            background-color: black;
+
+        }
+        
         *{
         margin: 0;
         padding: 0;
@@ -690,10 +698,11 @@ footer{
 </body>
 
 <script>
-        const modal = document.getElementById("modal");
-        const modalImage = document.getElementById("modal-image");
-        const closeButton = document.getElementById("modal-close");
-        
+const modal = document.getElementById("modal");
+const modalImage = document.getElementById("modal-image");
+const closeButton = document.getElementById("modal-close");
+
+
 document.querySelectorAll(".chara img, .king_chara img").forEach(img => {
     img.addEventListener("click", () => {
 
@@ -703,32 +712,36 @@ document.querySelectorAll(".chara img, .king_chara img").forEach(img => {
 
         const charaNumber = match[1];
 
-        modalImage.src = `image/chara_seet/S${charaNumber}_1x.webp`;
-        setTimeout(() => {
+        modal.classList.remove("active");
+
+        modalImage.removeAttribute("src");
+
+        modalImage.onload = () => {
             modal.classList.add("active");
-        }, 50);
+        };
+
+        modalImage.src = `image/chara_seet/S${charaNumber}_1x.webp`;
 
     });
 });
-        
-        function closeModal() {
-            modal.classList.remove("active");
-        }
-        
 
-        closeButton.addEventListener("click", closeModal);
-        
 
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-        
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                closeModal();
-            }
-        });
-        </script>
+function closeModal() {
+    modal.classList.remove("active");
+}
+
+closeButton.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+});
+</script>
 </html>
